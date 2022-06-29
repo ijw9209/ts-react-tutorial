@@ -1,47 +1,48 @@
 import React, { useReducer } from 'react';
 import { useSampleState, useSampleDispatch } from './SampleContext';
-type Color = 'red' | 'orange' | 'yellow';
 
 
-type State = {
-    count: number;
-    text: string;
-    color: Color;
-    isGood: boolean;
-}
+// type Color = 'red' | 'orange' | 'yellow';
 
-type Action =
-    | { type: 'SET_COUNT'; count: number }
-    | { type: 'SET_TEXT'; text: string }
-    | { type: 'SET_COLOR'; color: Color }
-    | { type: 'TOGGLE_GOOD' };
+// type State = {
+//     count: number;
+//     text: string;
+//     color: Color;
+//     isGood: boolean;
+// }
 
-const reducer = (state: State, action: Action): State => {
-    switch (action.type) {
-        case 'SET_COUNT':
-            return {
-                ...state,
-                count: action.count // count가 자동완성, number 타입인걸 알수있다.
-            };
-        case 'SET_TEXT':
-            return {
-                ...state,
-                text: action.text // text 자동완성, string 타입인걸 알수있다.
-            };
-        case 'SET_COLOR':
-            return {
-                ...state,
-                color: action.color // color 자동완성, Color 타입인걸 알수있다.
-            };
-        case 'TOGGLE_GOOD':
-            return {
-                ...state,
-                isGood: !state.isGood
-            };
-        default:
-            throw new Error('Unhandled action');
-    }
-}
+// type Action =
+//     | { type: 'SET_COUNT'; count: number }
+//     | { type: 'SET_TEXT'; text: string }
+//     | { type: 'SET_COLOR'; color: Color }
+//     | { type: 'TOGGLE_GOOD' };
+
+// const reducer = (state: State, action: Action): State => {
+//     switch (action.type) {
+//         case 'SET_COUNT':
+//             return {
+//                 ...state,
+//                 count: action.count // count가 자동완성, number 타입인걸 알수있다.
+//             };
+//         case 'SET_TEXT':
+//             return {
+//                 ...state,
+//                 text: action.text // text 자동완성, string 타입인걸 알수있다.
+//             };
+//         case 'SET_COLOR':
+//             return {
+//                 ...state,
+//                 color: action.color // color 자동완성, Color 타입인걸 알수있다.
+//             };
+//         case 'TOGGLE_GOOD':
+//             return {
+//                 ...state,
+//                 isGood: !state.isGood
+//             };
+//         default:
+//             throw new Error('Unhandled action');
+//     }
+// }
 
 const ReducerSample = () => {
     // const [state, dispatch] = useReducer(reducer, {
